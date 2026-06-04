@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Embrza | Launching Soon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --orange:#FF7A00;
+    --dark:#101827;
+    --gray:#667085;
+    --light:#F8FAFC;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--light);
+    overflow-x:hidden;
+    color:var(--dark);
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    padding:40px 20px;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    width:700px;
+    height:700px;
+    background:radial-gradient(circle,var(--orange) 0%,transparent 70%);
+    opacity:.08;
+    top:-250px;
+    left:-250px;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    width:700px;
+    height:700px;
+    background:radial-gradient(circle,var(--orange) 0%,transparent 70%);
+    opacity:.08;
+    bottom:-250px;
+    right:-250px;
+}
+
+.container{
+    max-width:900px;
+    position:relative;
+    z-index:10;
+}
+
+.logo{
+    margin-bottom:40px;
+}
+
+.logo img{
+    width:260px;
+    max-width:80%;
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(255,122,0,.1);
+    color:var(--orange);
+    padding:10px 18px;
+    border-radius:999px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+h1{
+    font-size:clamp(2.8rem,6vw,5rem);
+    line-height:1.05;
+    margin-bottom:20px;
+    font-weight:800;
+}
+
+.subtitle{
+    font-size:1.2rem;
+    color:var(--gray);
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.countdown{
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.time-box{
+    background:white;
+    min-width:120px;
+    padding:25px 20px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.time-box h2{
+    font-size:2.4rem;
+    color:var(--dark);
+}
+
+.time-box span{
+    color:var(--gray);
+    font-size:.9rem;
+}
+
+.buttons{
+    margin-top:45px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:16px 30px;
+    border-radius:14px;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--orange);
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    background:white;
+    color:var(--dark);
+    border:1px solid #E5E7EB;
+}
+
+.btn-secondary:hover{
+    transform:translateY(-3px);
+}
+
+.features{
+    margin-top:60px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    color:var(--gray);
+}
+
+.feature{
+    font-weight:500;
+}
+
+.footer{
+    margin-top:60px;
+    color:var(--gray);
+    font-size:.95rem;
+}
+
+@media(max-width:768px){
+
+.time-box{
+    min-width:90px;
+    padding:20px;
+}
+
+.time-box h2{
+    font-size:1.8rem;
+}
+
+h1{
+    font-size:2.7rem;
+}
+
+.subtitle{
+    font-size:1rem;
+}
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="logo">
+
+<!-- REPLACE WITH YOUR LOGO FILE -->
+<img src="logo.png" alt="Embrza Logo">
+
+</div>
+
+<div class="badge">
+🚀 Launching Soon
+</div>
+
+<h1>
+South Africa's Next Local Services Marketplace
+</h1>
+
+<p class="subtitle">
+Discover trusted professionals, compare services,
+request quotes, and book with confidence — all in one place.
+Embrza is launching soon in Cape Town.
+</p>
+
+<div class="countdown">
+
+<div class="time-box">
+<h2 id="days">14</h2>
+<span>Days</span>
+</div>
+
+<div class="time-box">
+<h2 id="hours">00</h2>
+<span>Hours</span>
+</div>
+
+<div class="time-box">
+<h2 id="minutes">00</h2>
+<span>Minutes</span>
+</div>
+
+<div class="time-box">
+<h2 id="seconds">00</h2>
+<span>Seconds</span>
+</div>
+
+</div>
+
+<div class="buttons">
+
+<a href="#" class="btn btn-primary">
+Join Early Access
+</a>
+
+<a href="#" class="btn btn-secondary">
+List Your Business
+</a>
+
+</div>
+
+<div class="features">
+
+<div class="feature">✓ Verified Providers</div>
+<div class="feature">✓ Instant Quotes</div>
+<div class="feature">✓ Secure Payments</div>
+<div class="feature">✓ Trusted Reviews</div>
+
+</div>
+
+<div class="footer">
+
+Launching Soon in Cape Town 🇿🇦
+
+<br><br>
+
+© 2026 Embrza. All rights reserved.
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const launchDate = new Date();
+launchDate.setDate(launchDate.getDate() + 14);
+
+function updateCountdown(){
+
+const now = new Date();
+const distance = launchDate - now;
+
+const days = Math.floor(distance/(1000*60*60*24));
+const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+const seconds = Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+</script>
+
+</body>
+</html>
