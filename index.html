@@ -1,55 +1,343 @@
-```html
-<div class="brand">
+<!DOCTYPE html>
 
-    <div class="fire-icon">
-        <div class="flame"></div>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embr. | Coming Soon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    height:100%;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    color:white;
+    overflow:hidden;
+}
+
+/* Background */
+
+.bg{
+    position:fixed;
+    inset:0;
+    background:url('background.jpg') center center;
+    background-size:cover;
+    z-index:-3;
+}
+
+.bg::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+
+    background:rgba(0,0,0,.15);
+}
+
+/* Overlay */
+
+.overlay{
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.35)
+    );
+
+    z-index:-2;
+}
+
+/* Main Content */
+
+.container{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    width:90%;
+    max-width:1100px;
+
+    margin:auto;
+}
+
+/* Brand */
+
+.brand{
+    margin-bottom:35px;
+}
+
+.brand-text{
+    font-size:72px;
+    font-weight:800;
+    color:white;
+    letter-spacing:-3px;
+}
+
+.dot{
+    color:#ff8a00;
+}
+
+/* Coming Soon */
+
+.coming{
+    color:#ff8a00;
+    font-size:16px;
+    letter-spacing:8px;
+    margin-bottom:25px;
+}
+
+/* Headline */
+
+h1{
+    font-size:78px;
+    line-height:0.95;
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+.orange{
+    color:#ff8a00;
+}
+
+/* Description */
+
+.description{
+    max-width:700px;
+
+    font-size:20px;
+    line-height:1.7;
+
+    color:rgba(255,255,255,.85);
+
+    margin-bottom:55px;
+}
+
+/* Countdown */
+
+.countdown{
+    display:flex;
+    gap:24px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:170px;
+    height:170px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:24px;
+
+    backdrop-filter:blur(12px);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.number{
+    font-size:64px;
+    font-weight:700;
+}
+
+.label{
+    margin-top:10px;
+    color:#ff8a00;
+    font-size:14px;
+    letter-spacing:3px;
+}
+
+/* Launch Date */
+
+.launch{
+    margin-top:40px;
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    color:rgba(255,255,255,.85);
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+    h1{
+        font-size:52px;
+    }
+
+    .brand-text{
+        font-size:52px;
+    }
+
+    .description{
+        font-size:18px;
+    }
+
+    .card{
+        width:135px;
+        height:135px;
+    }
+
+    .number{
+        font-size:46px;
+    }
+}
+
+@media(max-width:600px){
+
+    h1{
+        font-size:40px;
+    }
+
+    .brand-text{
+        font-size:42px;
+    }
+
+    .card{
+        width:110px;
+        height:110px;
+    }
+
+    .number{
+        font-size:38px;
+    }
+
+    .description{
+        font-size:16px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<div class="container">
+
+```
+<div class="brand">
+    <span class="brand-text">Embr<span class="dot">.</span></span>
+</div>
+
+<div class="coming">
+    COMING SOON
+</div>
+
+<h1>
+    Better connections.<br>
+    <span class="orange">Right in your area.</span>
+</h1>
+
+<div class="description">
+    We're building a better way to connect people with trusted local professionals.
+    Launching soon across the Western Cape.
+</div>
+
+<div class="countdown">
+
+    <div class="card">
+        <div class="number" id="days">00</div>
+        <div class="label">DAYS</div>
     </div>
 
-    <div class="brand-name">
-        Embr<span class="dot">.</span>
+    <div class="card">
+        <div class="number" id="hours">00</div>
+        <div class="label">HOURS</div>
+    </div>
+
+    <div class="card">
+        <div class="number" id="minutes">00</div>
+        <div class="label">MINUTES</div>
+    </div>
+
+    <div class="card">
+        <div class="number" id="seconds">00</div>
+        <div class="label">SECONDS</div>
     </div>
 
 </div>
+
+<div class="launch">
+    LAUNCHING 18 JUNE 2026 • 00:00 SAST
+</div>
 ```
 
-```css
-.fire-icon{
-    width:72px;
-    height:72px;
-    border-radius:50%;
-    background:#ff8a00;
-    position:relative;
+</div>
+
+<script>
+
+const launchDate =
+new Date("2026-06-18T00:00:00+02:00").getTime();
+
+function updateCountdown(){
+
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+
+    if(distance < 0){
+        document.querySelector('.countdown').innerHTML =
+        '<h2>🚀 We Are Live!</h2>';
+        return;
+    }
+
+    const days = Math.floor(distance/(1000*60*60*24));
+
+    const hours = Math.floor(
+        (distance%(1000*60*60*24))/
+        (1000*60*60)
+    );
+
+    const minutes = Math.floor(
+        (distance%(1000*60*60))/
+        (1000*60)
+    );
+
+    const seconds = Math.floor(
+        (distance%(1000*60))/
+        1000
+    );
+
+    document.getElementById('days').textContent = days;
+    document.getElementById('hours').textContent = hours;
+    document.getElementById('minutes').textContent = minutes;
+    document.getElementById('seconds').textContent = seconds;
 }
 
-.flame{
-    position:absolute;
-    top:18px;
-    left:26px;
+updateCountdown();
+setInterval(updateCountdown,1000);
 
-    width:20px;
-    height:30px;
+</script>
 
-    background:white;
-
-    border-radius:
-    50% 50% 50% 50% /
-    60% 60% 40% 40%;
-
-    transform:rotate(12deg);
-}
-
-.flame:before{
-    content:"";
-    position:absolute;
-
-    width:10px;
-    height:16px;
-
-    background:#ff8a00;
-
-    left:5px;
-    top:7px;
-
-    border-radius:50%;
-}
-```
+</body>
+</html>
